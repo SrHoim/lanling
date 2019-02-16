@@ -10,10 +10,11 @@ def zhuce(request):
 
 def login(request):
     if request.method == 'GET':
-        form = loginform(                                                                                                        )
+        form = loginform()
         return render(request, 'userauth/login.html', {'form': form})
     else:
         form = loginform(request.POST)
+        print(form.is_valid())
         if form.is_valid():
             phone = form.cleaned_data['phone']
             request.session['phone'] = phone
@@ -21,7 +22,6 @@ def login(request):
             # form = loginform()
             # return render(request, 'userauth/login.html', {'form': form})
         else:
-            print(dir(form))
             print(form.errors)
             return render(request, 'userauth/login.html', {'form': form})
 

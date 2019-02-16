@@ -30,11 +30,7 @@
         <img src="{% static '/userauth/img/one_2.png' %}" alt="" class="one">
         <input type="password" placeholder="密码" class="input" id="ps2">
     </div>
-    <div class="mima">
-        <img src="{% static '/userauth/img/one_6.png' %}" alt="" class="one1">
-        <input type="text" placeholder="" class="input">
-        <img src="{% static '/userauth/img/one_5.png' %}" alt="" class="two">
-    </div>
+
     <img src="{% static '/userauth/img/one_注册.png' %}" alt="" class="login" id="zhuce">
 </body>
 </html>
@@ -63,7 +59,9 @@
                     data:{'phone':$('#phone').val(),'ps':$('#ps1').val()},
                     type:'post',
                     success:function (e) {
-                        console.log(e);
+                        if(e=='ok'){
+                            location.replace('/userauth/login')
+                        }
                     }
                 })
             }
