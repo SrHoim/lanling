@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #FBFBFB;
+}
+header{
+    background-color: #F2F5FB;
+    padding-top: 0.8rem;
+}
+.top{
+    width: 100%;
+    height: 0.20rem;
+    padding: 0 0.25rem;
+    /*margin-top: 0.8rem;*/
+    box-sizing: border-box;
+    position: relative;
+}
+.top .fanhui{
+    float: left;
+    width: 0.22rem;
+}
+.top .fukuan{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 1.46rem;
+}
+.first{
+    width: 100%;
+    height: 0.8rem;
+    margin-top: 0.23rem;
+    padding: 0 0.25rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.first .left{
+    width: 2.82rem;
+    height: 0.22rem;
+}
+.first .right{
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.first .right .rmb{
+    width: 0.55rem;
+    height: 0.19rem;
+    margin-bottom: 0.07rem;
+}
+.first .right span{
+    display: block;
+    font-size: 0.34rem;
+    font-weight: 800;
+    color: #428EFF;
+
+}
+.zhanghao{
+    width: 100%;
+    padding: 0.26rem 0.25rem;
+    margin: 0.22rem auto 0;
+    display: flex;
+    align-items: center;
+}
+.zhanghao1{
+    margin-top: 0;
+}
+.zhanghao .one{
+    width: 1.66rem;
+    height: 0.23rem;
+    margin-right: 0.15rem;
+}
+.weixin{
+    width: 7.5rem;
+}
+.bottom{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.bottom span{
+    color: #FF8383;
+    font-size: 0.16rem;
+    position: absolute;
+    top: 0.40rem;
+    right: 0.43rem;
+    font-weight: 600;
+}

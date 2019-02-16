@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title>登录</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/userauth/css/index.css' %}">
+    <script src="{% static '/userauth/js/rem.js' %}"></script>
+</head>
+<body>
+    <!--<header></header>-->
+    <div class="top">
+        <img src="{% static '/userauth/img/index_2.png' %}" alt="" class="fanhui">
+        <a href="{% url 'userauth:zhuce' %}" style="display:block;float: right;margin-right: 0.4rem;width: 0.46rem;height:0.23rem;position: relative;top: 0;left: 0"><img src="{% static '/userauth/img/index_注册.png' %}" alt="" class="zhuce" style="position: absolute;top: 0;left: 0"></a>
+    </div>
+    <form action="{% url 'userauth:login' %}" method="post">
+            {% csrf_token %}
+    <div class="zhanghao">
+        <img src="{% static '/userauth/img/index_3.png' %}" alt="" class="one">
+        <!--<input type="text" placeholder="账号" class="input">-->
+        {{ form.phone }}
+    </div>
+    <div class="mima">
+        <img src="{% static '/userauth/img/index_4.png' %}" alt="" class="one">
+        <!--<input type="text" placeholder="密码" class="input">-->
+        {{ form.password }}
+    </div>
+    <div style="overflow: hidden"><img src="{% static '/userauth/img/index_6.png' %}" alt="" class="zhaohui"></div>
+    <div style="display:block;width:4.15rem;height: 0.7rem;margin: 0.45rem auto 0;position: relative;top: 0;left: 0">
+        <button value="submit" style="display:block;width:4.15rem;height: 0.7rem;margin: 0.45rem auto 0;position: absolute;top: 0;left: 0;opacity: 0;z-index: 50"></button>
+        <img src="{% static '/userauth/img/index_登录.png' %}" alt="" class="login" style="position: absolute;top: 0;left: 0;z-index: 20;margin-top: 0">
+    </div>
+    </form>
+
+    <img src="{% static '/userauth/img/index_手机号快捷登录.png' %}" alt="" class="phone">
+    <img src="{% static '/userauth/img/index_5.png' %}" alt="" class="disanfang">
+    <div class="buttom">
+        <img src="{% static '/userauth/img/index_qq.png' %}" alt="">
+        <img src="{% static '/userauth/img/index_微信.png' %}" alt="">
+    </div>
+</body>
+</html>

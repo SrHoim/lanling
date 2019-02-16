@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #FBFBFB;
+}
+header{
+    background-color: #F2F5FB;
+    padding-top: 0.8rem;
+}
+.top{
+    width: 100%;
+    height: 0.7rem;
+    padding: 0 0.25rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.top .fanhui{
+    float: left;
+    width: 0.22rem;
+}
+.top .fukuan{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 1.46rem;
+}
+.weixin{
+    width: 6.84rem;
+    margin: 0.45rem auto 0;
+}
+.mid{
+    width: 100%;;
+    margin: 1.1rem auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.mid img{
+    width: 6.54rem;
+    margin: auto;
+}
+.mid span{
+    display: block;
+    font-size: 0.4rem;
+    font-weight: 800;
+    color: #428EFF;
+    position: absolute;
+    top: 1rem;
+    left: 3.25rem;
+}
+.box{
+    width: 3.26rem;
+    margin: auto;
+}
+.son{
+    width: 3.68rem;
+    height: 3.68rem;
+    border: 0.11rem solid #B6DFFC;
+    border-radius: 50%;
+    margin: 0.6rem auto 0.6rem;
+    box-sizing: border-box;
+    background-image: url("../img/seven_4.png");
+    background-position: center;
+    background-size: 3.64rem 3.64rem;
+}
+.bottom{
+    width: 1.61rem;
+    margin: auto;
+}

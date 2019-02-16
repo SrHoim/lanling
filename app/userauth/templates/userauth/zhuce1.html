@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/userauth/css/one.css' %}">
+    <script src="{% static '/userauth/js/rem.js' %}"></script>
+</head>
+<body>
+    <!--<header></header>-->
+    <div class="top">
+        <img src="{% static '/userauth/img/index_2.png' %}" alt="" class="fanhui">
+        <a href="{% url 'userauth:login' %}" style="display:block;float: right;margin-right: 0.4rem;width: 0.46rem;height:0.23rem;position: relative;top: 0;left: 0"><img src="{% static '/userauth/img/one_登录.png' %}" alt="" class="zhuce" style="position: absolute;top: 0;left: 0"></a>
+    </div>
+    <div class="zhanghao">
+        <img src="{% static '/userauth/img/one_1.png' %}" alt="" class="one">
+        <input type="text" placeholder="手机号" class="input" id="phone">
+        <img src="{% static '/userauth/img/one_3.png' %}" alt="" class="two" id="p1" style="display: none">
+    </div>
+    <div class="mima">
+        <img src="{% static '/userauth/img/one_2.png' %}" alt="" class="one">
+        <input type="password" placeholder="密码" class="input" id="ps1">
+        <img src="{% static '/userauth/img/one_4.png' %}" alt="" class="two" id="p2" style="display: none">
+    </div>
+    <div class="mima">
+        <img src="{% static '/userauth/img/one_2.png' %}" alt="" class="one">
+        <input type="password" placeholder="密码" class="input" id="ps2">
+    </div>
+    <div class="mima">
+        <img src="{% static '/userauth/img/one_6.png' %}" alt="" class="one1">
+        <input type="text" placeholder="" class="input">
+        <img src="{% static '/userauth/img/one_5.png' %}" alt="" class="two">
+    </div>
+    <img src="{% static '/userauth/img/one_注册.png' %}" alt="" class="login" id="zhuce">
+</body>
+</html>
+
+<script src="{% static '/userauth/js/jquery-3.2.1.js' %}"></script>
+<script>
+    $('#phone').blur(function () {
+        if ($('#phone').val().length == 11){
+            $('#p1').css('display','block')
+        }else {
+            $('#p1').css('display','none')
+        }
+    })
+    $('#ps1').blur(function () {
+        if ($('#ps1').val() != ''){
+            $('#p2').css('display','block')
+        }else {
+            $('#p2').css('display','none')
+        }
+    })
+    $('#zhuce').click(function () {
+        if ($('#phone').val().length == 11){
+            if ($('#ps1').val() == $('#ps2').val()){
+                $.ajax({
+                    url:'/userauth/adduser/',
+                    data:{'phone':$('#phone').val(),'ps':$('#ps1').val()},
+                    type:'post',
+                    success:function (e) {
+                        console.log(e);
+                    }
+                })
+            }
+        }
+    })
+</script>

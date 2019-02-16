@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="ie-edge">
+    <meta name="viewport" content="width=device-width, user-scalable=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>详情</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/userauth/css/xiang.css' %}">
+    <script src="{% static '/userauth/js/rem.js' %}"></script>
+</head>
+<body style="background: #FBFBFB;">
+    <header>
+        <main class="ding"></main>
+        <main class="xin">
+          <img src="{% static '/userauth/image/x/椭圆.png' %}" alt="" style="width: .2rem;height: .2rem;">
+          <span style="font-size: .34rem;font-weight: 500;color:#428EFF">美文欣赏</span>
+          <img src="{% static '/userauth/image/x/分享.png' %}" alt="" style="width: .2rem;height: .2rem;">
+        </main>
+    </header>
+    <section class="nei">
+      <h3>{{ con.title }}</h3>
+      <div class="img">
+        <img src="{% static '/userauth/image/x/详情1.gif' %}" alt="">
+      </div>
+      <div class="zuo">
+        <!--<span>文/<li>段科科</li></span> <span>摄影/<li>刘昂</li></span>-->
+        <span>{{ con.aname }}</span>
+      </div>
+      <p class='rong'>{{ con.con }}</p>
+      <div class="shang">赏</div>
+    </section>
+    <div style="width: 100%;height: 1.5rem;"></div>
+  <footer>
+    <div class="yuan"><div class="nyuan"></div></div>
+    <input type="text" name="sou" class="sou" placeholder="输入评论内容...">
+    <img src="{% static '/userauth/image/x/yu.png' %}" alt="" class="foimg">
+    <img src="{% static '/userauth/image/x/xiao.png' %}" alt=""  class="foimg" >
+    <img src="{% static '/userauth/image/x/jia.png' %}" alt=""  class="foimg">
+  </footer>
+</body>
+</html>

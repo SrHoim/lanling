@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: url("../img/index_1.png");
+    background-size: 7.5rem;
+}
+/*header{*/
+/*}*/
+.top{
+    width: 100%;
+    height: 0.20rem;
+    padding: 0 0.25rem;
+    margin-top: 0.8rem;
+    box-sizing: border-box;
+}
+.top .fanhui{
+    float: left;
+    width: 0.22rem;
+}
+.top .zhuce{
+    float: right;
+    margin-right: 0.4rem;
+    width: 0.46rem;
+}
+.zhanghao{
+    width: 4.15rem;
+    height: 0.7rem;
+    border-bottom: 0.01rem solid #ccc;
+    margin: 2.55rem auto 0;
+    display: flex;
+    align-items: center;
+}
+.zhanghao .one{
+    width: 0.52rem;
+    height: 0.55rem;
+    margin-right: 0.15rem;
+    float: left;
+}
+.zhanghao .input{
+    float: left;
+    outline: none;
+    border: 0;
+    height: 0.55rem;
+    background-color: #FBFBFB;
+}
+.mima{
+    width: 4.15rem;
+    height: 0.7rem;
+    border-bottom: 0.01rem solid #ccc;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.mima .one{
+    width: 0.21rem;
+    height: 0.22rem;
+    margin-right: 0.3rem;
+    margin-left: 0.15rem;
+    float: left;
+}
+.mima .input{
+    float: left;
+    outline: none;
+    border: 0;
+    height: 0.55rem;
+    background-color: #FBFBFB;
+}
+.zhaohui{
+    width: 1.41rem;
+    height: 0.49rem;
+    float: right;
+    margin-right: 1.68rem;
+    margin-top: 0.2rem;
+}
+.login{
+    margin: 0.45rem auto 0;
+    width: 4.15rem;
+}
+.phone{
+    margin: 0.49rem auto 0;
+    width: 1.29rem;
+}
+.disanfang{
+    margin: 3.47rem auto 0;
+    width: 5.1rem;
+}
+.buttom{
+    margin: 0.25rem auto 0;
+    width: 3.55rem;
+    height: 1.01rem;
+    display: flex;
+    justify-content: space-between;
+}
+.buttom img{
+    width: 1.01rem;
+    height: 1.01rem;
+}
+
